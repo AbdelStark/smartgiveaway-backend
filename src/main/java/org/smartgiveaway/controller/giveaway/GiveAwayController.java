@@ -8,9 +8,11 @@ import org.smartgiveaway.error.GiveAwayNotFound;
 import org.smartgiveaway.model.giveaway.GiveAway;
 import org.smartgiveaway.repository.GiveAwayRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.CrossOrigin;
 
-@Service
+@Controller
+@CrossOrigin(origins = "*", allowedHeaders = "*")
 @Slf4j
 public class GiveAwayController implements GiveAwayAPI {
   @Autowired private GiveAwayRepository repository;
