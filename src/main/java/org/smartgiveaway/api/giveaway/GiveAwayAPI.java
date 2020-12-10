@@ -7,6 +7,7 @@ import io.swagger.v3.oas.annotations.Parameter;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import org.smartgiveaway.model.giveaway.GiveAway;
 import org.springframework.http.MediaType;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -21,6 +22,11 @@ public interface GiveAwayAPI {
   @GetMapping(path = "/{giveawayID}")
   @ResponseBody
   GiveAway findByID(@Parameter(description = "giveaway id") @PathVariable String giveawayID);
+
+  @Operation(summary = "Delete a giveaway by id")
+  @DeleteMapping(path = "/{giveawayID}")
+  @ResponseBody
+  void delete(@Parameter(description = "giveaway id") @PathVariable String giveawayID);
 
   @Operation(summary = "Find all giveaways")
   @GetMapping

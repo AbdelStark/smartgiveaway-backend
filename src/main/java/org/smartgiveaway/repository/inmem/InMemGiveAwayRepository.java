@@ -35,4 +35,9 @@ public class InMemGiveAwayRepository implements GiveAwayRepository {
   public List<GiveAway> findAll() {
     return new ArrayList<>(giveaways.values());
   }
+
+  @Override
+  public void remove(final String giveawayID) {
+    giveaways.remove(giveawayID);
+  }
 }

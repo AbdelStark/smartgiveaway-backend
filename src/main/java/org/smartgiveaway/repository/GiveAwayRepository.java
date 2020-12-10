@@ -12,4 +12,6 @@ public interface GiveAwayRepository {
   Optional<GiveAway> findByID(String giveawayID);
 
   List<GiveAway> findAll();
+
+  void remove(String giveawayID);
 }

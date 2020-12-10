@@ -21,6 +21,12 @@ public class GiveAwayController implements GiveAwayAPI {
   }
 
   @Override
+  public void delete(final String giveawayID) {
+    log.info("removing giveaway: {}", giveawayID);
+    repository.remove(giveawayID);
+  }
+
+  @Override
   public List<GiveAway> findAll() {
     return repository.findAll();
   }
