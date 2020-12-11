@@ -12,9 +12,11 @@ import lombok.ToString;
 public class GiveAway {
   private String giveawayId;
   private String name;
+  private String tweetLink;
   private String description;
   private int likeScore;
   private int retweetScore;
   private int maxParticipants;
   private double prize;
+
 }
