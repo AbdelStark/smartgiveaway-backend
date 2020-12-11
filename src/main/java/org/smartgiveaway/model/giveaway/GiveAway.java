@@ -18,5 +18,4 @@ public class GiveAway {
   private int retweetScore;
   private int maxParticipants;
   private double prize;
-
 }
